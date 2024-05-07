@@ -10,13 +10,11 @@ function App() {
   const [compostCount, setCompostCount] = useState(0);
 
   const getPrediction = async (content) => {
-    const predictionKey = "c7773dfc59d14a99b8abe2da34800ea1";
-
-    const endpoint = `https://ecosort-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/fb9a7b7c-a230-4bb9-92b5-a8b171aa4cf8/classify/iterations/Iteration1/image`;
+    const endpoint = `https://ecosort-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/${process.env.REACT_APP_CUSTOM_VISION_ID}/classify/iterations/Iteration1/image`;
 
     const headers = {
       "Content-Type": "application/octet-stream",
-      "Prediction-Key": predictionKey,
+      "Prediction-Key": process.env.REACT_APP_CUSTOM_VISION_PREDICTION_KEY,
       "Process-Data": false,
     };
 
