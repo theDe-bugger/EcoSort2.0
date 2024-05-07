@@ -9,20 +9,6 @@ function App() {
   const [trashCount, setTrashCount] = useState(0);
   const [recycleCount, setRecycleCount] = useState(0);
   const [compostCount, setCompostCount] = useState(0);
-  // const [confidence, setConfidence] = useState(0);
-  // image url
-  // https://ecosort-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/fb9a7b7c-a230-4bb9-92b5-a8b171aa4cf8/classify/iterations/Iteration1/url
-  // Set Prediction-Key Header to : c7773dfc59d14a99b8abe2da34800ea1
-  // Set Content-Type Header to : application/json
-  // Set Body to : {"Url": "https://example.com/image.png"}
-
-  // image file
-  // https://ecosort-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/fb9a7b7c-a230-4bb9-92b5-a8b171aa4cf8/classify/iterations/Iteration1/image
-  // Set Prediction-Key Header to : c7773dfc59d14a99b8abe2da34800ea1
-  // Set Content-Type Header to : application/octet-stream
-  // Set Body to : <image file>
-  // const b64toBlob = (base64, type = "application/octet-stream") =>
-  //   fetch(`data:${type};base64,${base64}`).then((res) => res.blob());
 
   const getPrediction = async (content) => {
     // const imageUrl =  "https://www.shutterstock.com/image-photo/banana-cluster-isolated-600nw-575528746.jpg";
@@ -43,7 +29,6 @@ function App() {
     for (let i = 0; i < binaryImage.length; i++) {
       byteArray[i] = binaryImage.charCodeAt(i);
     }
-    // const data = new Blob([byteArray], { type: "application/octet-stream" });
     const data = byteArray;
     axios
       .post(endpoint, data, { headers })
@@ -67,7 +52,7 @@ function App() {
         console.error("Error: ", error);
       });
   };
-  // create a capture function
+
   const capture = useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
     console.log(imageSrc);
