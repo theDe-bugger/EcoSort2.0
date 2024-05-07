@@ -28,11 +28,10 @@ function App() {
     axios
       .post(endpoint, data, { headers })
       .then((response) => {
-        console.log("Response Status: ", response.status);
-        console.log("Response Data: ", response.data);
+        // console.log("Response Status: ", response.status);
+        // console.log("Response Data: ", response.data);
         if (response.data.predictions.length) {
           const result = response.data.predictions[0].tagName;
-          console.log(result);
           // const confidence = response.data.predictions[0].probability;
           if (result === "garbage") {
             setTrashCount((trashCount) => trashCount + 1);
