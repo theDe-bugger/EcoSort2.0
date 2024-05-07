@@ -1,20 +1,25 @@
 # Summary
-I made a simplistic waste-sorting web-app using Microsoft Azure Custom Vision and React.js. This is an updated version of an old HTML/CSS/JS app that my team submitted to EarthxHack 2020.
+
+I made a simplistic waste-sorting web-app using Microsoft Azure Custom Vision and React.js. This is an updated version of an old HTML/CSS/JS app that my team submitted to EarthxHack 2020 and won top 10 globally (250+ teams).
 
 # Try it Out
+
 ### Live Online:
+
 [EcoSort](https://ecosort.netlify.app/)
 
 ### Locally:
+
 1. Clone the repo
 2. Make sure node is installed
 3. Run `npm i`
 4. Open `localhost:3000` and take a picture!
-It's that simple!
+   It's that simple!
 
 ## DevPost
 
 ## Version 2.0
+
 I remade the entire app with React.js and trained a new model as of May 5, 2024. You can check out the original devpost submission and repository here:https://devpost.com/software/ecosort-jhrp0e
 
 # How it Works
@@ -28,7 +33,6 @@ I remade the entire app with React.js and trained a new model as of May 5, 2024.
 
 1. Since this was a custom model and I had not used Microsoft Azure before, it was a slight learning curve figuring out how to upload a dataset, train it, and which API's to use.
 2. I had to work with the free-tier limits including a max of 5,000 images and 1 hour of training time per month, so another challenge here was finding the right dataset. I scoured Kaggle for valid datasets and found a simplistic one to do the job after an hour.
-
 
 # The Issue at Hand
 
