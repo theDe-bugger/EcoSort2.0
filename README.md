@@ -1,36 +1,34 @@
-# Demo Video
+# Summary
+I made a simplistic waste-sorting web-app using Microsoft Azure Custom Vision and React.js. This is an updated version of an old HTML/CSS/JS app that my team submitted to EarthxHack 2020.
 
-https://youtu.be/y_FYCLihdAI
+# Try it Out
+### Live Online:
+[EcoSort](https://ecosort.netlify.app/)
+
+### Locally:
+1. Clone the repo
+2. Make sure node is installed
+3. Run `npm i`
+4. Open `localhost:3000` and take a picture!
+It's that simple!
 
 ## DevPost
 
-The website no longer functions due to the expired Microsoft Azure API; however, you can check out the devpost submission here:https://devpost.com/software/ecosort-jhrp0e
+## Version 2.0
+I remade the entire app with React.js and trained a new model as of May 5, 2024. You can check out the original devpost submission and repository here:https://devpost.com/software/ecosort-jhrp0e
 
 # How it Works
 
-1. When index.html is opened, and the user snaps a picture of the item, the JavaScript camera draws the image onto a canvas.
-2. This canvas provides a base 64 Data URL. This is stored in a variable and uploaded to the Firebase Database. The image URL is retrieved and stored in local storage.
-3. The ML component retrieves this URL from local storage when necessary and uploads it to the ML Microsoft Azure application. It inputs the image into the machine learning app.
-4. The image is compared inside the machine learning component and the material category is determined. This then provides data to ecoSort.
-5. The image is compared inside the machine learning component and the material category is determined. This then provides data to ecoSort.
+1. Used `react-webcam` to capture an image from the user in base64 format
+2. This is converted to a binary format (byte array) to pass through the Azure Custom Vision API
+3. A custom model was trained on Azure and it recieves the image, makes it's prediction and sends the results back
+4. The front-end updates the page with dynamic counts for the number of recycling/trash/compost images that have been seen so far.
 
-# The Processes and Challenges
+# Technical Challenges
 
-## Javascript Camera
+1. Since this was a custom model and I had not used Microsoft Azure before, it was a slight learning curve figuring out how to upload a dataset, train it, and which API's to use.
+2. I had to work with the free-tier limits including a max of 5,000 images and 1 hour of training time per month, so another challenge here was finding the right dataset. I scoured Kaggle for valid datasets and found a simplistic one to do the job after an hour.
 
-The foundation of ecoSort is the camera which allows pictures to be taken via webcam. This was a minor challenge we faced, but it was the first challenge. The process to code a Javascript SDK camera was new and confusing at first. After learning about image canvas and camera output sources, we were able to create a functioning webpage camera which captured an image and posted it to the top right of the screen. This took approximately the first 3-4 hours of the hackathon. Jaimil and Mahtab worked on this, while Sam and Ayush figured out the machine learning component.
-
-## Machine Learning
-
-The machine learning component required several components setup to run efficiently. The first part was navigating through the used software. Microsoft Azure was used to develop a machine learning algorithm, but since no one had experience with it, it was really challenging. When someone has experience with a concept, it is much easier to implement it to the application, but with no experience, it requires time and effort to learn. The second part of the challenge was actually training the algorithm. This required hundreds of images to be inputted and the machine to be trained several times to recognize patterns. This part was necessary, and the most time consuming because to determine whether an object was recyclable, compostable, or garbage, the software had to recognize it accurately. The machine learning is also the base to this project.
-
-## Input Processing
-
-The biggest challenge, which took approximately 7-8 hours, was figuring out how to input the data to the ML component. The image that was drawn from the camera was recorded as a data URL, which was inapplicable to the Machine Learning app. Several possible solutions were tested including imgur and img bb APIs, PHP servers, and databases. APIs required a lot more code than we were experienced with since there were few tutorials, and it was a post method. We worked for hours to implement this, to somehow upload a base 64 Data URL to imgur and retrieve an image link, but to no avail. We looked into PHP servers, but that required a completely new level of complexity to our application. At 3 am, Jaimil looked into a Firebase Database system to upload the data URL as an image. This required a lot more code and was complex as it required several components in the script. By 5 am, the Firebase code was implemented and the image URLs were successfully retrieved for the ML component. These were stored in session storage.
-
-## Putting them Together
-
-The final step and challenge to this project was putting the machine learning code and the camera code together into one web app. This caused several errors and issues in the code, which required hours to be sorted through and debugged. The final code was organized into appropriate folders and then uploaded to GitHub. This required several tests before it was ready to be submitted.
 
 # The Issue at Hand
 
