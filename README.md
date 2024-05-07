@@ -1,6 +1,16 @@
-# Demo Video
+# Summary
+I made a simplistic waste-sorting web-app using Microsoft Azure Custom Vision and React.js. This is an updated version of an old HTML/CSS/JS app that my team submitted to EarthxHack 2020.
 
-https://youtu.be/y_FYCLihdAI
+# Try it Out
+### Live Online:
+[EcoSort](https://ecosort.netlify.app/)
+
+### Locally:
+1. Clone the repo
+2. Make sure node is installed
+3. Run `npm i`
+4. Open `localhost:3000` and take a picture!
+It's that simple!
 
 ## DevPost
 
