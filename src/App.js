@@ -9,7 +9,7 @@ function App() {
   const [trashCount, setTrashCount] = useState(0);
   const [recycleCount, setRecycleCount] = useState(0);
   const [compostCount, setCompostCount] = useState(0);
-  const [confidence, setConfidence] = useState(0);
+  // const [confidence, setConfidence] = useState(0);
   // image url
   // https://ecosort-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/fb9a7b7c-a230-4bb9-92b5-a8b171aa4cf8/classify/iterations/Iteration1/url
   // Set Prediction-Key Header to : c7773dfc59d14a99b8abe2da34800ea1
@@ -53,12 +53,12 @@ function App() {
         if (response.data.predictions.length) {
           const result = response.data.predictions[0].tagName;
           console.log(result);
-          const confidence = response.data.predictions[0].probability;
-          if (result == "garbage") {
+          // const confidence = response.data.predictions[0].probability;
+          if (result === "garbage") {
             setTrashCount((trashCount) => trashCount + 1);
-          } else if (result == "recycling") {
+          } else if (result === "recycling") {
             setRecycleCount((recycleCount) => recycleCount + 1);
-          } else if (result == "compost") {
+          } else if (result === "compost") {
             setCompostCount((compostCount) => compostCount + 1);
           }
         }
