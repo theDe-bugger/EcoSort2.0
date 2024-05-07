@@ -1,9 +1,8 @@
 import "./App.css";
 import Webcam from "react-webcam";
-import { useRef, useState, useCallback } from "react"; // import useRef
+import { useRef, useState, useCallback } from "react";
 import axios from "axios";
 function App() {
-  // code
   const webcamRef = useRef(null);
   const [imgSrc, setImgSrc] = useState(null);
   const [trashCount, setTrashCount] = useState(0);
@@ -11,14 +10,12 @@ function App() {
   const [compostCount, setCompostCount] = useState(0);
 
   const getPrediction = async (content) => {
-    // const imageUrl =  "https://www.shutterstock.com/image-photo/banana-cluster-isolated-600nw-575528746.jpg";
     const predictionKey = "c7773dfc59d14a99b8abe2da34800ea1";
 
     const endpoint = `https://ecosort-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/fb9a7b7c-a230-4bb9-92b5-a8b171aa4cf8/classify/iterations/Iteration1/image`;
 
     const headers = {
       "Content-Type": "application/octet-stream",
-      // "Content-Length": JSON.stringify(content.length),
       "Prediction-Key": predictionKey,
       "Process-Data": false,
     };
