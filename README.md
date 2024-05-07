@@ -4,7 +4,7 @@ https://youtu.be/y_FYCLihdAI
 
 ## DevPost
 
-The website no longer functions due to the expired Microsoft Azure API; however, you can check out the devpost submission here:https://devpost.com/software/ecosort-jhrp0e
+You can check out the original devpost submission here:https://devpost.com/software/ecosort-jhrp0e
 
 # How it Works
 
