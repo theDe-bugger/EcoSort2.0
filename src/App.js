@@ -81,7 +81,7 @@ function App() {
     } catch (error) {
       console.error("Error processing image: ", error);
     }
-  }, [webcamRef, getPrediction]);
+  }, [webcamRef]);
 
   const retake = () => {
     setImgSrc(null);
