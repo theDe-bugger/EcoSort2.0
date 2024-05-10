@@ -1,6 +1,6 @@
 # Summary
 
-I made a simplistic waste-sorting web-app using Microsoft Azure Custom Vision and React.js. This is an updated version of an old HTML/CSS/JS app that my team submitted to EarthxHack 2020 and won top 10 globally (250+ teams).
+I made a simplistic waste-sorting web-app using Microsoft Azure Custom Vision and React.js + Bootstrap. This is an updated version of an old HTML/CSS/JS app that my team submitted to EarthxHack 2020 and won top 10 globally (250+ teams).
 
 # Try it Out
 
@@ -16,7 +16,12 @@ I made a simplistic waste-sorting web-app using Microsoft Azure Custom Vision an
 4. Open `localhost:3000` and take a picture!
    It's that simple!
 
+### Demo Video
+https://github.com/theDe-bugger/EcoSort2.0/assets/39176231/2be25d6c-60bb-4751-9fe4-3dbcfcd30193
+
+
 ## DevPost
+[DevPost](https://devpost.com/software/ecosort-jhrp0e)
 
 ## Version 2.0
 
