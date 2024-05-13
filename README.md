@@ -17,7 +17,10 @@ I made a simplistic waste-sorting web-app using Microsoft Azure Custom Vision an
    It's that simple!
 
 ### Demo Video
-https://github.com/theDe-bugger/EcoSort2.0/assets/39176231/2be25d6c-60bb-4751-9fe4-3dbcfcd30193
+
+https://github.com/theDe-bugger/EcoSort2.0/assets/39176231/9c7c2738-5d0d-4340-8ae3-02f363391e6f
+
+
 
 
 ## DevPost
